@@ -1,0 +1,23 @@
+.navbar {
+    background-color: #333;
+    height: 100px;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageCardDivStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageCardImgStyle {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    display: block;
+}
