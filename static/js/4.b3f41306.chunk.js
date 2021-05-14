@@ -1,0 +1,2 @@
+(this["webpackJsonptranslation-ui"]=this["webpackJsonptranslation-ui"]||[]).push([[4],{37:function(s,t,e){"use strict";e.r(t);t.default=[{imgUrl:"https://yeah811651282.files.wordpress.com/2021/05/0008.jpeg"},{imgUrl:"https://yeah811651282.files.wordpress.com/2021/05/0009.jpeg"}]}}]);
+//# sourceMappingURL=4.b3f41306.chunk.js.map
