@@ -1,13 +1,21 @@
 import React from 'react';
-import ImageCard from './ImageCard'
 
-import data from '../comic/fatheridontwanttogetmarried/data.js'
+import Chapter from './Chapter'
+import Home from './Home'
+
+import Header from './Header.js';
+import Footer from './Footer.js';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 function App() {
 
-  const dataComponents=data.map(obj => <ImageCard imgUrl={obj.imgUrl} />)
-  console.log(dataComponents)
   return <div>
-    {dataComponents}
+    <Header />
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/fidwtm" component={Chapter} />
+    </Switch>
+    <Footer />
   </div>
 }
 
