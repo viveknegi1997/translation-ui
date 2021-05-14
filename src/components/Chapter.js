@@ -1,18 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ImageCard from './ImageCard'
 
-import data from '../comic/fatheridontwanttogetmarried/data.js'
 function Chapter() {
 
-  const dataComponents=data.map(obj => <ImageCard imgUrl={obj.imgUrl} />)
+    const [jsonChapter, setjsonChapter] = useState([]);
+    const [moduleExists, setmoduleExists] = useState(true);
+    var pathname = window.location.pathname.split('/');
+    var comic = pathname[1];
+    var chapter = pathname[2];
 
-  //import("../comic/fatheridontwanttogetmarried/data1.js").then(data1 => console.log(data1.default))
-  const component = React.lazy(() => import("../comic/fatheridontwanttogetmarried/data1.js"));
-  console.log(component)
-  console.log(dataComponents)
-  return <div>
-    {dataComponents}
-  </div>
+    useEffect(() => {
+            async function loadData() {
+                const data1 = await import(`../comic/${comic}/${chapter}.js`).catch(() => setmoduleExists(false));
+                try{
+                setjsonChapter(data1.default)
+                }
+                catch{}
+            }
+            loadData();
+        }
+    , [])
+    var jsonChapterItems
+
+    function render(){
+    if(moduleExists)
+        {jsonChapterItems = jsonChapter.map(obj => <ImageCard key={obj.imgUrl} imgUrl={obj.imgUrl} />)
+        return jsonChapterItems}
+    else
+        return <h1>COMIC OR CHAPTER Doesn't Exist</h1>
+    }
+
+
+    return <div>
+        {render()}
+    </div>
 }
 
 export default Chapter;

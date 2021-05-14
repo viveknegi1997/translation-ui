@@ -6,7 +6,7 @@ import Home from './Home'
 import Header from './Header.js';
 import Footer from './Footer.js';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as  Switch, Route } from 'react-router-dom';
 function App() {
 
   return <div>

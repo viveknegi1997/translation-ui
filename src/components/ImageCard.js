@@ -4,7 +4,7 @@ function ImageCard(props) {
     console.log(props)
     return (
         <div className="imageCardDivStyle">
-            <img className="imageCardImgStyle" src={props.imgUrl}></img>
+            <img className="imageCardImgStyle" alt="imagerendering" src={props.imgUrl}></img>
         </div>
     );
 }

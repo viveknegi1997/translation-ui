@@ -32,4 +32,6 @@
     margin: 0px;
     border: 0px;
     display: block;
+    max-width: 100%;
+    height: auto;
 }
