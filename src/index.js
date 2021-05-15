@@ -6,7 +6,7 @@ import App from './components/App.js';
 
 import './style.css';
 
-import { BrowserRouter as Router} from 'react-router-dom';
+import { HashRouter as Router} from 'react-router-dom';
 
 //.js is default extention so we can remove it in filename aboe ./app.js
 
