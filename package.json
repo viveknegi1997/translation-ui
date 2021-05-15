@@ -20,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://viveknegi1997.github.io/translation-ui",
+  "homepage": "https://manhuapoint.com",
   "eslintConfig": {
     "extends": [
       "react-app",
