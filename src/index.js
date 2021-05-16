@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 import App from './components/App.js';
 
 import './style.css';
-
-import { HashRouter as Router} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { HashRouter as Router } from 'react-router-dom';
 
 //.js is default extention so we can remove it in filename aboe ./app.js
 
