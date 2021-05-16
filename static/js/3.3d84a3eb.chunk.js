@@ -1,0 +1,2 @@
+(this["webpackJsonptranslation-ui"]=this["webpackJsonptranslation-ui"]||[]).push([[3],{63:function(s,t,i){"use strict";i.r(t);t.default=[{imgUrl:"https://cdnmanhuaplus1.files.wordpress.com/2021/05/11-9.jpg?w=50724"}]}}]);
+//# sourceMappingURL=3.3d84a3eb.chunk.js.map
