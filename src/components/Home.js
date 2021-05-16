@@ -6,8 +6,6 @@ import Button from 'react-bootstrap/Button'
 import * as Constants from '../constants/Constants'
 function Home() {
 
-  console.log(Constants.comics)
-
   return <Container>
     <Row>
       {Constants.comics.map((comic, key) =>
