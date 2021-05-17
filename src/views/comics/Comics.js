@@ -2,13 +2,14 @@ import React from "react";
 import { Container } from 'react-bootstrap'
 import * as Constants from "constants/Constants";
 
-function AboutUs() {
+function Comics() {
+
     return (
         <>
             <div className="wrapper">
                 <div className="section base-page vision-page">
                     <Container>
-                        {Constants.aboutUsData.mainText.map((text, key) => <p key={key}>{text}</p>)}
+                        <p>{Constants.comicChapters[window.location.hash].detailedDescription}</p>
                     </Container>
                 </div>
             </div>
@@ -16,4 +17,4 @@ function AboutUs() {
     );
 }
 
-export default AboutUs;
+export default Comics;
