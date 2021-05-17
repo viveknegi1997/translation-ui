@@ -1,1 +1,0 @@
-{"version":3,"sources":["comic/fidwtm/29.js"],"names":["data1","imgUrl"],"mappings":"uHAAA,OAMeA,UANH,CACR,CACIC,OAAO","file":"static/js/3.3d84a3eb.chunk.js","sourcesContent":["const data1=[\n    {\n        imgUrl:\"https://cdnmanhuaplus1.files.wordpress.com/2021/05/11-9.jpg?w=50724\"\n    }\n]\n\nexport default data1;"],"sourceRoot":""}
