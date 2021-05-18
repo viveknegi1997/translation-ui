@@ -14,7 +14,8 @@ import Comics from 'views/comics/Comics'
 import Addsense from './Addsense';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import * as Constants from "constants/Constants";
+import Chapter from 'views/chapter/Chapter';
+
 
 function App() {
   return <>
@@ -24,7 +25,9 @@ function App() {
       <div className="contentWrap">
         <Switch>
           <Route path={["/home", "/"]} exact component={Home} />
-          <Route path={Constants.subdomains.comics} component={Comics} />
+          <Route path="/comic/*/*" component={Chapter} />
+          <Route path="/comic/*" exact component={Comics} />
+          
           <Route path="/aboutus" component={AboutUs} />
           <Route path="/contactus" component={ContactUs} />
           <Route path="/privacypolicy" component={PrivacyPolicy} />

@@ -59,3 +59,7 @@
     height: 15vw;
     object-fit: cover;
 }
+
+.btn-space {
+    margin-right: 10px;
+}
