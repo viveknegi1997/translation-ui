@@ -1,6 +1,6 @@
 
 export const aws = {
-    accessKeyId: "AKIAX2JRPSMT57MABTDB",
-    secretAccessKey: "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",
+    accessKeyId: "AKIAX2JRPSMT3WAVYB5B",
+    secretAccessKey: "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",
     bucket: "manhuapointin",
 };
