@@ -23,3 +23,9 @@ export const S3 = () => {
     return s3
 }
 
+
+export const LoadingChapter = ()=>(
+ <div className="loading-chapter">
+     image loading
+ </div>
+)

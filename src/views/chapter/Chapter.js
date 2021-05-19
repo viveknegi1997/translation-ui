@@ -1,7 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
+import LazyLoad from 'react-lazyload'
+
 import ImageCard from 'components/ImageCard'
-import { S3, getImageFromS3data, getS3PathFromUrl } from 'utils/Utils'
+import { LoadingChapter,S3, getS3PathFromUrl } from 'utils/Utils'
 import * as AwsConfig from "constants/Awsconfig";
+
+
 function Chapter() {
 
     const [imageKeys, setImageKeys] = useState(null);
@@ -39,14 +43,13 @@ function Chapter() {
 
             }
             else {
-                let s3 = S3()
 
                 let tempArray = []
 
                 for (let i = 0; i < imageKeys.length; i++) {
 
                     if (!imageKeys[i].Key.endsWith('/')) {
-                        let url="https://manhuapointin.s3.amazonaws.com/"+imageKeys[i].Key
+                        let url = "https://manhuapointin.s3.amazonaws.com/" + imageKeys[i].Key
                         tempArray.push(url)
                     }
                 }
@@ -67,7 +70,7 @@ function Chapter() {
 
             jsonChapterItems = imageUrl.map((obj, key) => {
 
-                return <ImageCard key={key} imgUrl={obj} />
+                return <LazyLoad height={200} offset={500} key={key} once placeholder={<LoadingChapter/>}><ImageCard key={key} imgUrl={obj} /></LazyLoad>
             })
             return jsonChapterItems
         }
@@ -76,9 +79,8 @@ function Chapter() {
     }
 
 
-    return <div>
-        {render()}
-    </div>
+    return <> {render()}</>
+    
 }
 
 export default Chapter;

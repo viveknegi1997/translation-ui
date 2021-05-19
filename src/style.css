@@ -40,18 +40,20 @@
 }
 
 .imageCardDivStyle {
-    display: flex;
+    /* display: flex;
+     */
     justify-content: center;
     align-items: center;
 }
 
 .imageCardImgStyle {
+    /* height: auto; */
     padding: 0px;
     margin: 0px;
     border: 0px;
-    display: block;
-    max-width: 100%;
-    height: auto;
+    /* display: block ;
+    max-width: 100%; */
+    
 }
 
 .comicCardImg{
@@ -62,4 +64,9 @@
 
 .btn-space {
     margin-right: 10px;
+}
+
+.loading-chapter{
+    height: 1000px;
+    min-height: 1000px;
 }
