@@ -46,14 +46,8 @@ function Chapter() {
                 for (let i = 0; i < imageKeys.length; i++) {
 
                     if (!imageKeys[i].Key.endsWith('/')) {
-                        await s3.getObject(
-                            { Bucket: AwsConfig.aws.bucket, Key: imageKeys[i].Key },
-                            function (error, data) {
-                                if (error == null) {
-                                    tempArray.push(getImageFromS3data(data.Body))
-                                }
-                            }
-                        ).promise()
+                        let url="https://manhuapointin.s3.amazonaws.com/"+imageKeys[i].Key
+                        tempArray.push(url)
                     }
                 }
                 setImageUrl(tempArray)
@@ -70,7 +64,9 @@ function Chapter() {
         let jsonChapterItems = []
 
         if (imageUrl) {
+
             jsonChapterItems = imageUrl.map((obj, key) => {
+
                 return <ImageCard key={key} imgUrl={obj} />
             })
             return jsonChapterItems
