@@ -26,6 +26,6 @@ export const S3 = () => {
 
 export const LoadingChapter = ()=>(
  <div className="loading-chapter">
-     image loading
+     <h6>Scroll Down To Load image</h6>
  </div>
 )

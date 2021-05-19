@@ -86,6 +86,13 @@ export const comics = [
         description: 'Chapter Reviews for comic',
         detailedDescription: 'Demonic Emperor Zhuo Yifan met the misfortune of being betrayed and killed by his trusted disciple. After being reborn, his cultivation went back to zero and he was trapped by a heart demon, given no choice but to become the housekeeper of the Luo Family’s lone eldest miss. From being a Magic Emperor to being an insignificant housekeeper, how would he get along with his “heart demon eldest miss” and what power would he gain in order to lead himself and the declining family to rise back to the peak of the continent!',
         url: '#/comic/sl'
+    },
+    {
+        name: 'My Harem Grew So Large, I Was Forced to Ascend',
+        photo: require('assets/img/harem.jpeg'),
+        description: 'Chapter Reviews for comic',
+        detailedDescription: 'Demonic Emperor Zhuo Yifan met the misfortune of being betrayed and killed by his trusted disciple. After being reborn, his cultivation went back to zero and he was trapped by a heart demon, given no choice but to become the housekeeper of the Luo Family’s lone eldest miss. From being a Magic Emperor to being an insignificant housekeeper, how would he get along with his “heart demon eldest miss” and what power would he gain in order to lead himself and the declining family to rise back to the peak of the continent!',
+        url: '#/comic/mhgsliwfta'
     }
 ];
 
@@ -122,5 +129,8 @@ export const comicChapters = {
     ,
     '#/comic/sl': {
         detailedDescription: 'A perverted and brutal Prince x A weak and silent concubine You are the one I care for, not your gender!  The Prince of Commander of the North has a crush on the daughter of the Shen family, and wants to take their daughter as a concubine. In order to give his adoptive mother a better life in her old age, the mute, male servant Shen Yu conceals his gender and takes the place of the daughter to be sent to Prince of Commander of the North, Jun Xuanxiao. Shen Yu is afraid that once his identity is found he will lose his life, but to his surprise, he attracts the attention of Jun Xuanxiao...',
+    },
+    '#/comic/mhgsliwfta': {
+        detailedDescription: "Tsundere heavenly master, big-breasted sister, barefoot poison cultivator, immortal swordswoman with white silk clothes, the last 5 out of the 6 strongest people in the world. I, Ye Gulou have become the first person to cultivate immortality through pure unbounded Yang. But wait, cultivating pure unbounded Yang means I can't form relationships with women or else I'll die?! Then what can I do about this harem of mine that's grown so large over the years? They're all chasing me down, coercing me to choose between them (otherwise they'll kill Me). They've forced me to ascend to the Heavens, to immortality right now to escape from their wrath. Oh shit, they followed me to the new world?!! Let's see what awaits us as my harems from both worlds combine!"
     }
 };
