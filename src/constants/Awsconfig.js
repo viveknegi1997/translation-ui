@@ -1,6 +1,6 @@
 
 export const aws = {
-    accessKeyId: "",
-    secretAccessKey: "",
+    accessKeyId: "dummyaccess",
+    secretAccessKey: "dummysecret",
     bucket: "manhuapointin",
 };

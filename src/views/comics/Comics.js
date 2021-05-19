@@ -11,7 +11,7 @@ function Comics() {
     const [chapterList, setChapterList] = useState(null);
     useEffect(() => {
         async function loadData() {
-
+            
             let s3 = S3()
             //console.log(getS3PathFromUrl(window.location.hash))
             let bucketParams = {
