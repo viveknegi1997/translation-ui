@@ -1,0 +1,8 @@
+.comic-description{
+    margin-top: 5px;
+    display:flex;
+    justify-content:center;
+    align-content: center;
+    background-color: rgb(198, 221, 221);
+    color: rgb(2, 23, 117);
+}

@@ -15,6 +15,15 @@
     z-index: 9999;  /*higher z index gets on top of lowe z index*/
 }
 
+.divCentreFlex{
+    background-color: rgb(6, 209, 236);
+    color: rgb(93, 12, 23);
+     display: flex;
+        font-size: 20px;
+     justify-content: center;
+     align-items: center;
+}
+
 .footer {
     position: absolute;
    bottom: 0;
@@ -56,16 +65,40 @@
     
 }
 
+.comicCardTitle{
+    display: -webkit-box;   
+    text-overflow: ellipsis;
+   -webkit-line-clamp: 1; 
+   -webkit-box-orient: vertical;     
+   overflow: hidden; 
+}
+.comicCardText{
+    line-height: 2.5ex;
+    height: 7.5ex;
+    display: -webkit-box; 
+    text-overflow: ellipsis;  
+   -webkit-line-clamp: 3; 
+   -webkit-box-orient: vertical;     
+   overflow: hidden; 
+}
+
 .comicCardImg{
     width: 100%;
     padding: 10px;
     height: 15vw;
-    object-fit: cover;
+    object-fit:scale-down;
 }
 
 .comicCard{
     margin: 10px;
 }
+
+.comicCardButton{
+    display:flex;
+    justify-content:center;
+    align-content: center;
+}
+
 
 .btn-space {
     margin-right: 10px;

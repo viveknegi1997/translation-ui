@@ -6,22 +6,25 @@ import Button from 'react-bootstrap/Button'
 import * as Constants from '../constants/Constants'
 function Home() {
 
-  return <Container class="comicCardRow">
-    <Row>
-      {Constants.comics.map((comic, key) =>
-        <Col md="4" key={key}>
-          <Card className="comicCard" >
-            <Card.Img variant="top" className="comicCardImg" src={comic.photo.default} />
-            <Card.Body>
-              <Card.Title>{comic.name}</Card.Title>
-              <Card.Text>{comic.description}</Card.Text>
-              <Button variant="primary" href={comic.url}>Go To Comic</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      )}
-    </Row>
-  </Container>
+  return <>
+    <Container class="comicCardRow">
+      <Row>
+        {Constants.comics.map((comic, key) =>
+          <Col md="4" key={key}>
+            <Card className="comicCard" >
+              <Card.Img variant="top" className="comicCardImg" src={comic.photo.default} />
+              <Card.Body >
+                <Card.Title className="comicCardTitle">{comic.name}</Card.Title>
+                <Card.Text className="comicCardText">{comic.description}</Card.Text>
+                <Button variant="primary" className="comicCardButton" href={comic.url}>Go To Comic</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        )}
+
+      </Row>
+    </Container>
+  </>
 
 }
 

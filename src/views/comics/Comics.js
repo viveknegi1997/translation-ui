@@ -4,7 +4,7 @@ import * as Constants from "constants/Constants";
 import { S3, getS3PathFromUrl } from 'utils/Utils'
 import * as AwsConfig from "constants/Awsconfig";
 import LoadSpinner from 'components/LoadSpinner/LoadSpinner';
-
+import './Comics.css'
 import Button from 'react-bootstrap/Button'
 function Comics() {
 
@@ -66,12 +66,12 @@ function Comics() {
         <>
             <div className="wrapper">
                 <div className="section base-page vision-page">
-                    <Container>
+                    <Container className="comic-description">
                         <p>{Variable()}</p>
-                        <h3>Chapters</h3>
                     </Container>
 
                     <Container>
+                    <h3>Chapters</h3>
                         <Row>
                             <Col md="auto">
                                 {render()}
