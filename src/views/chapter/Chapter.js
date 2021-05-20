@@ -4,10 +4,10 @@ import LazyLoad from 'react-lazyload'
 import ImageCard from 'components/ImageCard'
 import { LoadingChapter,S3, getS3PathFromUrl } from 'utils/Utils'
 import * as AwsConfig from "constants/Awsconfig";
-
+import LoadSpinner from 'components/LoadSpinner/LoadSpinner';
 
 function Chapter() {
-
+    const [isLoaded, setIsLoaded] = useState(true);
     const [imageKeys, setImageKeys] = useState(null);
     const [imageUrl, setImageUrl] = useState(null);
     const initialRender = useRef(true);
@@ -26,7 +26,7 @@ function Chapter() {
                 } else {
                     //console.log("Success", data.Contents);
                     setImageKeys(data.Contents)
-
+                    setIsLoaded(currentIsLoaded => !currentIsLoaded)
                 }
             });
         }
@@ -70,7 +70,7 @@ function Chapter() {
 
             jsonChapterItems = imageUrl.map((obj, key) => {
 
-                return <LazyLoad height={200} offset={500} key={key} once placeholder={<LoadingChapter/>}><ImageCard key={key} imgUrl={obj} /></LazyLoad>
+                return <LazyLoad height={400} offset={500} key={key} once placeholder={<LoadingChapter/>}><ImageCard key={key} imgUrl={obj} /></LazyLoad>
             })
             return jsonChapterItems
         }
@@ -79,7 +79,7 @@ function Chapter() {
     }
 
 
-    return <> {render()}</>
+    return <> {render()}<div>{isLoaded && <LoadSpinner />}</div></>
     
 }
 

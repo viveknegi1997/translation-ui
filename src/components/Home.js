@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button'
 import * as Constants from '../constants/Constants'
 function Home() {
 
-  return <Container>
+  return <Container class="comicCardRow">
     <Row>
       {Constants.comics.map((comic, key) =>
         <Col md="4" key={key}>
@@ -15,7 +15,7 @@ function Home() {
             <Card.Body>
               <Card.Title>{comic.name}</Card.Title>
               <Card.Text>{comic.description}</Card.Text>
-              <Button variant="primary" href={comic.url}>Latest Chapter</Button>
+              <Button variant="primary" href={comic.url}>Go To Comic</Button>
             </Card.Body>
           </Card>
         </Col>

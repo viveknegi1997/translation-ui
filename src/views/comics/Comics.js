@@ -3,11 +3,12 @@ import { Col, Row, Container } from 'react-bootstrap'
 import * as Constants from "constants/Constants";
 import { S3, getS3PathFromUrl } from 'utils/Utils'
 import * as AwsConfig from "constants/Awsconfig";
-
+import LoadSpinner from 'components/LoadSpinner/LoadSpinner';
 
 import Button from 'react-bootstrap/Button'
 function Comics() {
 
+    const [isLoaded, setIsLoaded] = useState(true);
     const [chapterList, setChapterList] = useState(null);
     useEffect(() => {
         async function loadData() {
@@ -32,9 +33,11 @@ function Comics() {
                         }
                         return ""
                     })
+                    setIsLoaded(currentIsLoaded => !currentIsLoaded)
                     setChapterList(Array.from(chapterSet))
                 }
             });
+            
         }
         loadData()
     }, [])
@@ -57,8 +60,6 @@ function Comics() {
             })
             return jsonChapterItems
         }
-        else
-            return <h1>.</h1>
     }
 
     return (
@@ -76,6 +77,7 @@ function Comics() {
                                 {render()}
                             </Col>
                         </Row>
+                        {isLoaded && <LoadSpinner />}
                     </Container>
                 </div>
             </div>
